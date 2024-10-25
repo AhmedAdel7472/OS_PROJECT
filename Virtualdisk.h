@@ -1,3 +1,5 @@
+#ifndef VIRTUALDISK_H
+#define VIRTUALDISK_H
 #include <fstream>
 #include <vector>
 #include <string>
@@ -11,3 +13,4 @@ class Virtualdisk
     static char * writecluster(int cluster_index);
     static bool isNew();
 };
+#endif
