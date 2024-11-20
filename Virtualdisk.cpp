@@ -10,7 +10,7 @@ fstream Virtualdisk::disk;
 // Function to open or create the virtual disk file
 void Virtualdisk::openorcreate(string path) {
     // Open the disk file in read/write mode, creating it if it doesn't exist
-    disk.open(path, ios::in | ios::out | ios::binary);
+    disk.open(path, ios::in | ios::out | ios::binary); //what happens when it sees nothing is created
 
     // If the file doesn't exist, create it
     if (!disk) {
@@ -43,7 +43,7 @@ char * Virtualdisk::writecluster(int cluster_index) {
     disk.write(data, sizeof(data));
 
     return data;
-}
+} // check when it begins from the beginning of the disk and when it starts from the end
 
 // Function to check if the disk file is new
 bool Virtualdisk::isNew() {
